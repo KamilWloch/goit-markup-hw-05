@@ -137,6 +137,7 @@ body {
     color: var(--blue-accent);
     fill: var(--blue-accent);
     stroke: var(--blue-accent);
+    transition: color fill stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-icon {
@@ -148,8 +149,8 @@ body {
 .header-contact-icon:active {
     fill: var(--blue-accent);
     stroke: var(--grey-text);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .menu:hover {
@@ -166,7 +167,7 @@ body {
     height: 4px;
     background-color: var(--blue-accent);
     border-radius: 2px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -275,6 +276,7 @@ body {
 .social-links-footer-item:focus {
     background-color: var(--blue-accent);
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-footer-item-icon {
@@ -522,6 +524,7 @@ body {
     background-color: var(--blue-accent);
     fill: var(--white-background);
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-card-item {
@@ -577,12 +580,14 @@ body {
 .our-clients-icon:focus {
     border: 1px solid var(--blue-accent);
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .our-clients-icon:hover svg {
     fill: var(--blue-accent);
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* PORTFOLIO */
@@ -617,6 +622,7 @@ body {
     color: var(--white-background);
     background-color: var(--blue-accent);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Portfolio */
@@ -649,6 +655,7 @@ body {
 .list-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-image {
@@ -675,8 +682,19 @@ body {
     color: var(--grey-text);
 }
 
+.list-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.list-item:hover .portfolio-text,
+.list-item:focus .portfolio-text {
+    transform: translateY(-100%);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-text {
-    position:absolute;
+    position: absolute;
     width: 370px;
     height: 294px;
     margin-left: auto;
@@ -688,8 +706,7 @@ body {
     cursor: pointer;
 }
 
-.text-box
-{
+.text-box {
     position: absolute;
     color: var(--white-background);
     font-size: 18px;
@@ -697,18 +714,14 @@ body {
     letter-spacing: 0.03em;
     padding: 49px 45px 49px 24px;
     margin: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.list-item:hover .portfolio-text,
-.list-item:focus .portfolio-text {
-    transform: translateY(-100%);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+.list-item:hover,
+.list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* MODAL WINDOW */
